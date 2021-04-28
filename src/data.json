@@ -1,0 +1,28 @@
+[
+	{
+		"firstName": "Halil Emre",
+		"lastName": "Yıldız",
+		"dobDate": "2002-02-14T00:00:00",
+		"pictureUrl": "https://cdna.artstation.com/p/users/avatars/002/590/832/large/a1426ee20b5fceb95924424dfa2efbb8.jpg",
+		"nat": "TR",
+		"message": "İyi Ki Doğdun...",
+		"message1": "Doğum Günün Kutlu Olsun :)",
+		"message2": "",
+		"message3": "",
+		"fontColor": "#00b9fd",
+		"bgColor": "#202528"
+	},
+	{
+		"firstName": "Aybüke Tuğba",
+		"lastName": "Arslan",
+		"dobDate": "2003-04-29T00:00:00",
+		"pictureUrl": "https://yt3.ggpht.com/ytc/AAUvwngL0AbzXJ-Um--G2VRZrDGT5GJLvuWk2ikyZ1Hoz0M=s88-c-k-c0x00ffffff-no-rj",
+		"nat": "TR",
+		"message": "İyi Ki Doğdun...",
+		"message1": "$age. Yaşın Kutlu Olsun",
+		"message2": "",
+		"message3": "",
+		"fontColor": "#ff6868",
+		"bgColor": "#fff"
+	}
+]
