@@ -30,6 +30,7 @@ i{
 	width: 12%;
 }
 body {
+	overflow: hidden;
 	align-items: center;
 	background-color: #eef0f6;
 	display: flex;
