@@ -9,8 +9,6 @@
 		<link rel="stylesheet" href="src/style.css">
 		<script src="lib/jquery-3.6.0.min.js"></script>
 		<script src="src/script.js"></script>
-		<script>
-		</script>
 	</head>
 	<body>
 		<div class="card">
@@ -27,6 +25,7 @@
 		<a href="https://www.instagram.com/jahn_star/"><p id="developer"> <i class="fa fa-code"></i> by @Jahn_Star</p></a>
 	</body>
 	<!-- Confetti -->
-	<canvas id="canvas" style="position: fixed; top: 0px;"></canvas>
+	<audio id="player"></audio>
+	<canvas id="canvas" style="position: fixed; top: 0px;" onclick="player = document.getElementById('player'); player.src = 'src/IveNeverBeenThere.mp3'; player.play();"></canvas>
 	<script type="text/javascript" src="src/confetti.js"></script>
 </html>

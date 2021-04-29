@@ -66,4 +66,4 @@ function scrollToMiddle(id) {
 }
 setTimeout(function() {
     $('#canvas').fadeOut(1000);
-}, 12000);
+}, 15000);
