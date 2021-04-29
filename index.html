@@ -3,8 +3,9 @@
 <html lang="en">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="viewport" content="initial-scale=0.9, maximum-scale=0.9">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 		<title> Happy Birtdah </title>
+		<link rel="shortcut icon" type="image/png" href="src/favicon.png" />
 		<link rel="stylesheet" href="src/style.css">
 		<script src="lib/jquery-3.6.0.min.js"></script>
 		<script src="src/script.js"></script>
@@ -25,4 +26,8 @@
 		</div>
 		<a href="https://www.instagram.com/jahn_star/"><p id="developer"> <i class="fa fa-code"></i> by @Jahn_Star</p></a>
 	</body>
+	<!-- Confetti -->
+	<canvas id="canvas" style="position: fixed; top: 0px; opacity:0; animation: close 15s ease-in;"></canvas>
+	<style> @keyframes close { 0% {opacity: 0.9;} 75% {opacity: 0.9;} 100% {opacity: 0;}}</style>
+	<script type="text/javascript" src="src/confetti.js"></script>
 </html>
