@@ -1,31 +1,144 @@
 <!--  Author: Halil Emre Yildiz - </> by @JahnStar -->
+<!--  License: https://github.com/JahnStar/happy-birthday/blob/master/LICENSE -->
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
-		<title>Dogum Gunun Kutlu Olsun :)</title>
+		<title>Hey eCard Maker: Create Free Online Card!</title>
 		<link rel="shortcut icon" type="image/png" href="src/favicon.png" />
 		<link rel="stylesheet" href="src/style.css">
 		<script src="lib/jquery-3.6.0.min.js"></script>
 		<script src="src/script.js"></script>
+		<script async src="lib/addtoany-page.js"></script>
+		<script data-ad-client="ca-pub-1538295633983643" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	</head>
 	<body>
 		<div class="card">
-			<img class="circle" src="src/cake-1.png">
-			<div id="cake">
-				<img id="cake-image" style="max-width: 225px" src="src/cake.png">
-			</div>
-			<div class="info">
-				<h1 id="title">İyi Ki Doğdun...</h1>
-				<p id="message">Yeni yaşın kutlu olsun!</p>
-				<a href="" class="button" onclick="Notification();">:)</a>
+			<a onclick="EditMode()" class="changeMode"><i class="fa fa-pencil" id="mode"></i></a>
+			<img id="picture" class="circle" src="src/media/byHey.png"><br>
+			<input class="EditMode circle" style="display:none;" id="pictureUrl_" type="text" value="src/media/byHey.png" placeholder="image url" required>
+			<div class="info" style="text-align: center;">
+				<img id="template" src="src/media/Cake.png">
+				<br>
+				<select class="EditMode" id="templates" style="display:none; width: 50%;">
+					<optgroup label="Doğum Günü $Birthday">
+						<option value="Cake">Doğum Günü Pastası $Birthday Cake</option>
+						<option value="Party">Doğum Günü Partisi $Birthday Party</option>
+						<option value="Gift">Doğum Günü Hediyesi $Birthday Gift</option>
+					</optgroup>
+					<optgroup label="Düşünceler ve Duygular $Thoughts & Feelings">
+						<option value="Love">Seni Seviyorum $I Love You</option>
+						<option value="Miss">Seni Özledim $I Miss You</option>
+						<option value="Sorry">Özür Dilerim $I'm Sorry</option>
+						<option value="Thanks">Teşekkürler $Thanks</option>
+					</optgroup>
+					<optgroup label="Özel Günler ve Etkinlikler $Occasions & Other">
+						<option value="Invitation">Etkinlik Davetiyesi $Invitation</option>
+						<option value="Wedding">Düğün Davetiyesi $Wedding Invitation</option>
+						<option value="Marriage">Evlilik Teklifi $Marriage Proposal</option>
+						<option value="Anniversary">Yıldönümü $Anniversary</option>
+						<option value="Valentines">Sevgililer Günü $Valentine's Day</option>
+						<option value="Mothers">Anneler Günü $Mother's Day</option>
+						<option value="Eid">Hayırlı Bayramlar $Eid Mubarak</option>
+						<option value="Festive">Mutlu Yıllar $Happy New Year</option>
+						<option value="Custom">#Özel CSS $#Custom CSS</option>
+					</optgroup>
+				</select>
+				<select id="templates-data" style="display:none;">
+					<optgroup label="Birthday">
+						<option value="f34662#ffffff">İyi Ki Doğdun :)*Nice sağlıklı, mutlu, huzurlu, ve güzel yıllar diliyorum. Doğum günün kutlu olsun...
+						$Happy Birthday :)*Wishing you a beautiful day with good health and happiness forever.</option>
+						<option value="00bbff#202528">İyi Ki Doğdun :)*Tüm dileklerinin gerçekleşmesi ve hep mutlu olman dileğimle... Nice mutlu yıllara...
+						$Happy Birthday :)*Hope your special day brings you all that your heart desires! Here’s wishing you a day full of pleasant surprises!</option>
+						<option value="f10808#ffe7eb">İyi Ki Doğdun :)*Sana layık değil ama umarım hediyem hoşuna gider... İyi ki tanıdım seni, iyi ki varsın, iyi ki doğdun...
+						$Happy Birthday :)*You were born, and the world became a better place. I'm so glad I met you. I hope you'll enjoy this...</option>
+					</optgroup>
+					<optgroup label="Thoughts & Feelings">
+						<option value="dc3e60#ffedf0">Seni Seviyorum!*Dünyaya bin kez daha gelecek olsam, bin kez daha arar, bulur, severim seni.
+						$I Love You So Much!*If I had to choose between you and chocolate, I’d choose you...</option>
+						<option value="f7a32e#f3ebdb">Seni Özledim!*Çölün yağmura, bir çocuğun annesine, ayın güneşe olan özlemi gibi özledim seni.
+						$I Miss You*I miss you like the moon misses the sun...</option>
+						<option value="7a51b8#0a0f28">Özür Dilerim!*Hatalar yapılmasa affetmenin güzelliği olmazdı hayatta… Çok üzgünüm… Lütfen beni affet…
+						$I'm Sorry*I’m sorry for being so insensitive and insane, I know that it’s not an excuse. I hope you can have a forgiving heart soon. </option>
+						<option value="f04e37#e5f5f5">Teşekkürler!*Çok nazik ve ince düşüncelisin. İyi ki varsın, teşekkür ederim.
+						$Thank you*Thank you for your kindness...</option>
+					</optgroup>
+					<optgroup label="Occasions">
+						<option value="32bec8#f5ffff">Etkinliğimizde Davetlisiniz*Etkinliğimizde sizleri de aramızda görmekten mutluluk duyarız.
+						$You Are Invited*Join us at our event.</option>
+						<option value="ff5363#ffffff">Evleniyoruz!*Bu mutlu günümüzde sizleri de aramızda görmekten mutluluk duyarız.
+						$John & Jane*Happily invite you to celebrate their wedding.</option>
+						<option value="ab434a#fff4de">Benimle Evlenir Misin?*Her günü, her saati, her saniyeyi seninle beraber geçirmek istiyorum!
+						$Will You Marry Me?*Ever since the day we met, I knew I was meant to be yours till the end of time. Will you be mine forever?</option>
+						<option value="d3174a#fbe6e6">Yıldönümümüz Kutlu Olsun!*Benim senden öncem yok, sensiz de sonram olmayacak. İyi ki geldin, hoş geldin dünyama.
+						$Happy Anniversary!*Happy anniversary to the only person in the world that I want beside me every day and every night for the rest my life. I love you...</option>
+						<option value="b91029#fbe6e6">Sevgilim...*Sevmeyi seninle öğrendim. Sonsuza kadar seninle olmayı istiyorum. Sevgililer günün kutlu olsun!
+						$Happy Valentine’s Day*My love, my life, my heart, my forever Valentine.</option>
+						<option value="da72ab#fff6fc">Canım Annem...*Sen benim kalbimin içinde tuttuğum en güzel şeysin, Anneler günün kutlu olsun!
+						$Happy Mother's Day!*I love you more than words can say. Thank you for making me the person I am today. You are my angel.</option>
+						<option value="bb822d#fffcf6">Hayırlı Bayramlar!*Sağlıklı, huzurlu, mutlu ve umutlu bir gelecek dileğiyle... Bayramınız Mübarek Olsun.
+						$Eid Mubarak!*May this special day bring peace, happiness and prosperity to everyone.</option>
+						<option value="f5b353#3d0000">Mutlu Yıllar!*Yeni yılın sana ve tüm sevdiklerine sağlık, mutluluk, neşe, başarı, bolca para, sevgi ve huzur getirmesini dilerim.
+						$Happy New Year!*I desire and pray that you may enjoy good health, great wealth, boundless joy and unquantifiable peace. Happy New Year!</option>
+						<option value="282828#dadada">Örnek Başlık*Örnek Mesaj ＜br>＜style> #message{color:red} #template{content:url("src/favicon.png")} ＜/style>
+						$Example Title*Example Message ＜br>＜style> #message{color:red} #template{content:url("src/favicon.png")} ＜/style></option>
+					</optgroup>
+				</select>
+				<form action="" class="EditMode" id="edit" style="display:none;">	
+					<h1><input id="title_" type="text" value="İyi Ki Varsın :)" placeholder="Başlık" required></h1>
+					<p><textarea id="message_" rows="3" cols="50" type="text" placeholder="Mesaj" required></textarea>
+					<input type="color" value="#f34662" id="mainColor_">
+					<input type="color" value="#ffffff" id="bgColor_">
+					</p>
+					<p style="margin: 50px 0px 20px 0px;"><input type="checkbox" id="suprise"><label> Confetti & Music </label></p>
+					<a type="submit" class="button" onclick="" style="display: none;">
+					<!-- AddToAny BEGIN -->
+					<div class="a2a_kit a2a_kit_size_48 a2a_default_style" id="my_centered_buttons">
+					<a class="a2a_button_copy_link"></a>
+					<a class="a2a_button_whatsapp"></a>
+					<a class="a2a_button_facebook_messenger"></a>
+					<a class="a2a_button_sms"></a>
+					<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+					</div>
+					<!-- AddToAny END -->
+					</a>
+				</form>
+				<script>
+				var a2a_config = a2a_config || {};
+				a2a_config.delay = 9999;
+				a2a_config.onclick = 2;
+				a2a_config.callbacks = a2a_config.callbacks || [];
+				a2a_config.callbacks.push({ share: copyLink });
+				a2a_config.thanks = { postShare: true, 
+					ad: '<ins class=\"adsbygoogle\"\
+					style=\"display:inline-block;width:300px;height:250px\"\
+					data-ad-client=\"ca-pub-1538295633983643\"\
+					data-ad-slot=\"4964651877\"></ins>\
+					<\script>\
+					(adsbygoogle = window.adsbygoogle || []).push({});\
+					<\/script>'};
+				a2a_config.prioritize = ["copy_link","whatsapp","facebook_messenger", "sms", "email"];
+				a2a_config.num_services = 4;
+				</script>
+				<div class="ViewMode">
+					<h1 id="title">Hey eCard Maker:<br>E-cards are a fun and easy way to send a message!</h1>
+					<p id="message">Quickly create and customize your free online cards. And and send to a friend today! (Free & Safe)</p>
+					<!-- AddToAny BEGIN -->
+					<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+					<a class="button a2a_dd" href="https://www.addtoany.com/share" onclick="copyLink()"> Paylaş $ Share </a>
+					</div>
+					<!-- AddToAny END -->
+				</div>
 			</div>
 		</div>
-		<a href="https://www.instagram.com/jahn_star/"><p id="developer"> <i class="fa fa-code"></i> by @Jahn_Star</p></a>
+		<a href="https://jahnstar.github.io/donate/"><p id="developer"> <i class="fa fa-code"></i> by @Jahn_Star</p></a>
+		<a class="suprise" id="alert" onclick="playMusic()" > Müziği oynatmak için tıklayın $ Click here to play the music </a>
 	</body>
 	<!-- Confetti -->
-	<audio id="player"></audio>
-	<canvas id="canvas" style="position: fixed; top: 0px;" onclick="player = document.getElementById('player'); player.src = 'src/IveNeverBeenThere.mp3'; player.play();"></canvas>
+	<audio autoplay id="player">
+	  <source src="src/media/IveNeverBeenThere.mp3" type="audio/mpeg">
+	</audio>
+	<canvas class="suprise" id="canvas" style="position: fixed; top: 0px; pointer-events: none"></canvas>
 	<script type="text/javascript" src="src/confetti.js"></script>
 </html>
