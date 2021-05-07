@@ -44,7 +44,7 @@ function Load(){
 	$(".circle").css("color", mainColor);
 	$(".circle").css("background", bgColor);
 	$(".card").css("border-top", "5px solid " + mainColor);
-	$(".card").css("border-bottom", "6px solid " + mainColor);
+	$(".card").css("border-bottom", "5px solid " + mainColor);
 	$(".card").css("background", bgColor);
 	$("#alert").css("color", mainColor);
 	$("#alert").css("background", bgColor);
