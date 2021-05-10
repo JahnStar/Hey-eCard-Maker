@@ -11,9 +11,9 @@ Quickly create and customize your free online cards. And and send to a friend to
 <div align="center">
     <a align="center" href="https://jahnstar.github.io/hey-ecard-maker/" target="_blank">Demo:</a>
     <br><br>
-    <img src="demo/template1.png" width="30%">
-    <img src="demo/template1_edit_mode.png" width="30%">
-    <img src="demo/template13_edit_mode.png" width="30%">
+    <img src="demo/template1.png" width="33%">
+    <img src="demo/template1_edit_mode.png" width="33%">
+    <img src="demo/template13_edit_mode.png" width="33%">
 </div>
 <br>
 <p align="center">
