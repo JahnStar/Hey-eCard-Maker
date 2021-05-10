@@ -8,6 +8,14 @@
 <p align="center"><b>E-cards are a fun and easy way to send a message!</b></p><p align="center">
 Quickly create and customize your free online cards. And and send to a friend today! (Free & Safe)</p>
 
+<div align="center">
+    <a align="center" href="https://jahnstar.github.io/hey-ecard-maker/" target="_blank">Demo:</a>
+    <br><br>
+    <img src="demo/template1.png" width="30%">
+    <img src="demo/template1_edit_mode.png" width="30%">
+    <img src="demo/template13_edit_mode.png" width="30%">
+</div>
+<br>
 <p align="center">
   <a alt="Developed by Jahn Star" href="https://www.instagram.com/jahn_star/"><b>Developed by Halil Emre Yildiz</b></a>
 </p>
