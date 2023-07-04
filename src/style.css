@@ -148,7 +148,7 @@ input, textarea, #templates {
 	padding:5px;
 	font-size: 12px;
 	/* box-shadow: 0px 0px 5px #bbbbbb; */
-	font-family: Montserrat,Lato,LatoExtended,sans-serif;
+	/* font-family: Montserrat,Lato,LatoExtended,sans-serif; */
 }
 .a2a_mini_services, .a2a_more { display: auto !important; }
 .a2a_menu, .a2a_menu_find_container { border-radius: 10px !important; }
